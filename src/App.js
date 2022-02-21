@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="font-sachin">
+    <div className="font-sachin w-full overflow-hidden bg-[#121212]">
       <Intro />
       <Header />
       <Home />

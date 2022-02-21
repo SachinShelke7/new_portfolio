@@ -3,12 +3,12 @@ import { Link } from "react-scroll";
 
 const Header = () => {
   return (
-    <div className="flex justify-between sticky top-0 bg-[#6474E5] text-[#FFFFFF] w-full">
+    <div className="flex justify-between sticky top-0 bg-[#1D1D1D] text-[#FFFFFF] w-full z-[999]">
       <h3 className="py-4 pl-5">LOGO</h3>
       <div className="flex sm:space-x-5 py-4 pr-5">
         <Link
           activeClass="active"
-          to="home"
+          to="main"
           spy={true}
           smooth={true}
           offset={-50}
