@@ -3,9 +3,9 @@ import { Element } from "react-scroll";
 
 const Section = () => {
   return (
-    <Element name="home" className="element text-[#2e2e2e]">
-      <h1 className="text-8xl font-bold text-center">Heading</h1>
-      <p className="text-xl">
+    <Element name="skill" className="element">
+      <h1 className="text-white bg-black text-3xl font-bold">Heading2</h1>
+      <p className="text-white bg-black text-xl">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio
         placeat dolorum pariatur? Nobis culpa laudantium deserunt provident enim
         esse molestiae nulla non dolores. Amet perspiciatis natus rerum dicta

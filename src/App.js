@@ -1,16 +1,22 @@
 import "./App.css";
-import Section1 from "./components/Section1";
-import Section2 from "./components/Section2";
+import Home from "./components/Home";
+import Skills from "./components/Skills";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
+import Education from "./components/Education";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div>
+    <div className="font-sachin">
       <Intro />
       <Header />
-      <Section1 />
-      <Section2 />
+      <Home />
+      <Skills />
+      <Education />
+      <Projects />
+      <Contact />
     </div>
   );
 }

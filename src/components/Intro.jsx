@@ -42,7 +42,7 @@ const Intro = () => {
         </ScrollPage>
         <ScrollPage page={1}>
           <Animator animation={ZoomInScrollOut}>
-            <span style={{ fontSize: "40px" }}>Lets Get into Protfolio</span>
+            <span style={{ fontSize: "40px" }}>Lets Get into Portfolio</span>
           </Animator>
         </ScrollPage>
         <ScrollPage page={2}>
