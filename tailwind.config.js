@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sachin: ["Montserrat", "sans-serif"],
+        saira: ["Saira Condensed", "sans-serif"],
       },
     },
   },

@@ -13,15 +13,15 @@ import { bubble } from "react-burger-menu";
 const Section = () => {
   return (
     <Element name="main" className="element h-screen">
-      <div className="relative top-52 left-10 z-10">
+      <div className="relative top-52 left-0 z-10 pl-10">
         <Dyanamic />
-        <h3 className="w-[550px] pt-10">
-          I'm a <span className="text-blue-500">React.JS</span> Front-End
-          Developer from India who is passionate about making sure that
-          performance of the Web App is{" "}
-          <span className="text-red-500">Optimized</span>,{" "}
-          <span className="text-red-500">Smooth</span> and{" "}
-          <span className="text-red-500">Attractive</span>.
+        <h3 className="w-[550px] pt-10 text-gray-300">
+          I'm a <span className="text-white font-medium">React.JS</span>{" "}
+          Front-End Developer from India who is passionate about making sure
+          that performance of the Web App is{" "}
+          <span className="text-white font-medium">Optimized</span>,{" "}
+          <span className="text-white font-medium">Smooth</span> and{" "}
+          <span className="text-white font-medium">Attractive</span>.
         </h3>
         <div className="flex space-x-5 py-5">
           <div className="p-2 hover:bg-[#242424] cursor-pointer border rounded-full">
@@ -37,7 +37,7 @@ const Section = () => {
             <IoLogoTwitter size={30} />
           </div>
         </div>
-        <button className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md flex space-x-2 items-center">
+        <button className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-md flex space-x-2 items-center">
           <FaDownload />
           <p>Download Resume</p>
         </button>
