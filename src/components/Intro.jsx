@@ -20,7 +20,7 @@ const Intro = () => {
   const FadeUp = batch(Fade(), Move(), Sticky());
 
   return (
-    <div className="bg-[#191919] text-white text-center">
+    <div className="text-white text-center">
       <ScrollContainer>
         <ScrollPage page={0}>
           <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>

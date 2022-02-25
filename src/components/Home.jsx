@@ -1,26 +1,47 @@
 import React from "react";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Element } from "react-scroll";
 import Dyanamic from "../assets/type_effect/Dyanamic";
+import {
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoTwitter,
+  IoMailSharp,
+} from "react-icons/io5";
+import { bubble } from "react-burger-menu";
 
 const Section = () => {
   return (
-    <Element
-      name="main"
-      className="element h-screen text-white relative top-52 left-10 z-10"
-    >
-      <Dyanamic />
-      <h3 className="w-[550px] pt-10">
-        I'm a <span className="text-blue-500">React.JS</span> Front-End
-        Developer from India who is passionate about making sure that
-        performance of the Web App is{" "}
-        <span className="text-red-500">Optimized</span>,{" "}
-        <span className="text-red-500">Smooth</span> and{" "}
-        <span className="text-red-500">Attractive</span>.
-      </h3>
-      <p className="my-5">SOCIAL LINKS</p>
-      <button className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md">
-        Download Resume
-      </button>
+    <Element name="main" className="element h-screen">
+      <div className="relative top-52 left-10 z-10">
+        <Dyanamic />
+        <h3 className="w-[550px] pt-10">
+          I'm a <span className="text-blue-500">React.JS</span> Front-End
+          Developer from India who is passionate about making sure that
+          performance of the Web App is{" "}
+          <span className="text-red-500">Optimized</span>,{" "}
+          <span className="text-red-500">Smooth</span> and{" "}
+          <span className="text-red-500">Attractive</span>.
+        </h3>
+        <div className="flex space-x-5 py-5">
+          <div className="p-2 hover:bg-[#242424] cursor-pointer border rounded-full">
+            <IoLogoGithub size={30} />
+          </div>
+          <div className="p-2 hover:bg-blue-600 cursor-pointer border rounded-full">
+            <IoLogoLinkedin size={30} />
+          </div>
+          <div className="p-2 hover:bg-red-600 cursor-pointer border rounded-full">
+            <IoMailSharp size={30} />
+          </div>
+          <div className="p-2 hover:bg-blue-500 cursor-pointer border rounded-full">
+            <IoLogoTwitter size={30} />
+          </div>
+        </div>
+        <button className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-md flex space-x-2 items-center">
+          <FaDownload />
+          <p>Download Resume</p>
+        </button>
+      </div>
     </Element>
   );
 };

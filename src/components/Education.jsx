@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 
 const Education = () => {
   return (
-    <Element name="education" className="element h-screen">
+    <Element name="education" className="element">
       Education
     </Element>
   );

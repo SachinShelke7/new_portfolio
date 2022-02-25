@@ -9,14 +9,16 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="font-sachin w-full overflow-hidden bg-[#121212]">
+    <div className="font-sachin w-full overflow-hidden bg-[#1D1D1D] text-white">
       <Intro />
-      <Header />
-      <Home />
-      <Skills />
-      <Education />
-      <Projects />
-      <Contact />
+      <div className="mx-auto max-w-[1500px]">
+        <Header />
+        <Home />
+        <Skills />
+        <Education />
+        <Projects />
+        <Contact />
+      </div>
     </div>
   );
 }
