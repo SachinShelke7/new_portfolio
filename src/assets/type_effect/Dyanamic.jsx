@@ -2,7 +2,7 @@ import React from "react";
 
 const Dyanamic = () => {
   return (
-    <div className="text-3xl font-medium flex space-x-2 font-saira">
+    <div className="text-2xl font-medium flex space-x-2 font-saira">
       <h2>I'M</h2>
       <dynamic-type
         words="SACHIN SHELKE; REACT FRONTEND DEVELOPER; SEARCHING FOR JOB."

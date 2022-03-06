@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <>
-      <div className="font-sachin w-full bg-[#1D1D1D] text-white">
+      <div className="font-sachin w-full bg-[#1D1D1D] text-white select-none">
         <Intro />
         <div className="mx-auto max-w-[1500px]">
           <Header />

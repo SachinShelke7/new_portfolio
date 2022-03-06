@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import {
   FaBookReader,
@@ -10,13 +10,13 @@ import {
 
 const Header = () => {
   return (
-    <div className="flex justify-between sticky top-0 bg-[#2D2D2D] text-[#FFFFFF] w-full z-[999] group">
-      <div className="w-2 h-full bg-orange-500 group-hover:w-1/2 translate transition-all duration-[2000ms] absolute flex justify-center items-center z-[1] delay-300" />
-      <div className="w-2 h-full bg-orange-500 group-hover:w-1/2 translate transition-all duration-[2000ms] absolute flex justify-center items-center z-[1] right-0 delay-300" />
+    <div className="flex justify-between sticky top-0 bg-[#2D2D2D] text-[#FFFFFF] bg-blend-darken w-full z-[999] group">
+      <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[1]" />
+      <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[1] right-0" />
       <h3 className="py-4 pl-5 z-10 font-saira font-medium text-2xl">
         SACHIN SHELKE
       </h3>
-      <div className="flex items-center sm:space-x-5 px-5 z-10">
+      <div className="hidden sm:flex items-center sm:space-x-5 px-5 z-10">
         <Link
           activeClass="active"
           to="main"

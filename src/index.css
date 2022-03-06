@@ -5,3 +5,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  *::-webkit-scrollbar {
+    @apply w-[10px];
+  }
+  *::-webkit-scrollbar-track {
+    @apply bg-[#1D1D1D];
+  }
+  *::-webkit-scrollbar-thumb {
+    @apply bg-orange-500 rounded-full;
+  }
+}

@@ -15,7 +15,7 @@ const Section = () => {
     <Element name="main" className="element h-screen">
       <div className="relative top-52 left-0 z-10 pl-10">
         <Dyanamic />
-        <h3 className="w-[550px] pt-10 text-gray-300">
+        <h3 className="md:w-[550px] pt-10 text-gray-300">
           I'm a <span className="text-white font-medium">React.JS</span>{" "}
           Front-End Developer from India who is passionate about making sure
           that performance of the Web App is{" "}
