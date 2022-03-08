@@ -10,7 +10,7 @@ import {
 
 const Header = () => {
   return (
-    <div className="flex justify-between sticky top-0 bg-[#2D2D2D] text-[#FFFFFF] bg-blend-darken w-full z-[999] group">
+    <div className="flex justify-between sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] group shadow-white sachin">
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[1]" />
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[1] right-0" />
       <h3 className="py-4 pl-5 z-10 font-saira font-medium text-2xl">
@@ -47,7 +47,7 @@ const Header = () => {
           </div>
           Skill
         </Link>
-        <Link
+        {/* <Link
           activeClass="active"
           to="education"
           spy={true}
@@ -61,7 +61,7 @@ const Header = () => {
             <FaBookReader />
           </div>
           Education
-        </Link>
+        </Link> */}
         <Link
           activeClass="active"
           to="projects"

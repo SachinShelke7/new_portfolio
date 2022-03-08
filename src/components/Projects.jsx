@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 const Projects = () => {
   return (
     <Element name="projects" className="element">
-      projects
+      PROJECTS
     </Element>
   );
 };

@@ -24,22 +24,23 @@ const Section = () => {
           <span className="text-white font-medium">Attractive</span>.
         </h3>
         <div className="flex space-x-5 py-5">
-          <div className="p-2 hover:bg-[#242424] cursor-pointer border rounded-full">
+          <div className="p-2 cursor-pointer rounded-full btn_social">
             <IoLogoGithub size={30} />
           </div>
-          <div className="p-2 hover:bg-blue-600 cursor-pointer border rounded-full">
+          <div className="p-2 cursor-pointer rounded-full btn_social">
             <IoLogoLinkedin size={30} />
           </div>
-          <div className="p-2 hover:bg-red-600 cursor-pointer border rounded-full">
+          <div className="p-2 cursor-pointer rounded-full btn_social">
             <IoMailSharp size={30} />
           </div>
-          <div className="p-2 hover:bg-blue-500 cursor-pointer border rounded-full">
+          <div className="p-2 cursor-pointer rounded-full btn_social">
             <IoLogoTwitter size={30} />
           </div>
         </div>
-        <button className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-md flex space-x-2 items-center">
-          <FaDownload />
-          <p>Download Resume</p>
+        {/* <button className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-md flex space-x-2 items-center"> */}
+        {/* <FaDownload /> */}
+        <button className="btn_download font-bold px-6 py-3 rounded-full">
+          Download Resume
         </button>
       </div>
     </Element>
