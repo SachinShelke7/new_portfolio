@@ -70,7 +70,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiHtml5 size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">HTML</p>
+            <p className="text-xl font-medium py-2 text-center">HTML</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
@@ -87,7 +87,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiCss3 size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">CSS</p>
+            <p className="text-xl font-medium py-2 text-center">CSS</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
@@ -104,7 +104,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiJavascript size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">JAVASCRIPT</p>
+            <p className="text-xl font-medium py-2 text-center">JAVASCRIPT</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
@@ -121,7 +121,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiFirebase size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">FIREBASE</p>
+            <p className="text-xl font-medium py-2 text-center">FIREBASE</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
@@ -138,7 +138,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiVisualstudiocode size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">VS CODE</p>
+            <p className="text-xl font-medium py-2 text-center">VS CODE</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
@@ -155,7 +155,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiChakraui size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">CHAKRA UI</p>
+            <p className="text-xl font-medium py-2 text-center">CHAKRA UI</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
@@ -172,7 +172,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiBootstrap size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">BOOTSTRAP</p>
+            <p className="text-xl font-medium py-2 text-center">BOOTSTRAP</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
@@ -189,7 +189,7 @@ const Section = () => {
         <div className="skill_card">
           <div>
             <SiAntdesign size={100} color="#e2e2e2" />
-            <p className="text-xl font-medium py-2">ANT DESIGN</p>
+            <p className="text-xl font-medium py-2 text-center">ANT DESIGN</p>
           </div>
           <div className="flex flex-col space-y-10 justify-center items-center">
             Detail
