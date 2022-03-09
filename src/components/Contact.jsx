@@ -6,30 +6,31 @@ import {
   IoLogoTwitter,
   IoMailSharp,
 } from "react-icons/io5";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Contact = () => {
   const [error, setError] = useState(false);
   return (
     <Element name="contact" className="element">
-      <div className="w-full min-h-screen flex justify-center items-center py-20">
+      <div className="w-full min-h-screen flex justify-center items-center py-20 overflow-hidden">
         <div className="p-14 max-w-md sachin">
           <div className="flex flex-col space-y-10 justify-center items-center">
             <h4 className="font-medium">CONTACT FORM</h4>
             <input
               type="text"
-              className="input bg-transparent py-2 max-w-sm mx-20 rounded-full pl-5 "
+              className="input bg-transparent py-2 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"
               placeholder="Enter Your Name"
               required
             />
             <input
               type="text"
-              className="input bg-transparent py-2 max-w-sm mx-20 rounded-full pl-5 "
+              className="input bg-transparent py-2 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"
               placeholder="Enter Your Surname"
               required
             />
             <textarea
               type="text"
-              className="input bg-transparent pt-5 max-w-sm mx-20 rounded-full pl-5 "
+              className="input bg-transparent pt-5 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"
               placeholder="Massage"
               required
             />
@@ -41,7 +42,7 @@ const Contact = () => {
             </button>
             <div>
               {error && (
-                <p className="text-sm text-red-600 font-medium">
+                <p className="text-red-600 font-medium">
                   Currently Not Working Use Social Media
                 </p>
               )}
@@ -49,33 +50,62 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="p-14 sachin relative right-5 bg-[#404040]">
+        <div className="p-14 relative right-[4.8rem]">
           <div className="flex flex-col space-y-10 justify-center items-center">
             <div className="flex flex-col space-y-5">
-              <div className="flex space-x-5 items-center">
-                <div className="p-2 cursor-pointer rounded-full btn_social">
-                  <IoLogoGithub size={30} />
-                </div>
-                <p>Github</p>
-              </div>
-              <div className="flex space-x-5 items-center">
-                <div className="p-2 cursor-pointer rounded-full btn_social">
-                  <IoLogoLinkedin size={30} />
-                </div>
-                <p>Linkedin</p>
-              </div>
-              <div className="flex space-x-5 items-center">
-                <div className="p-2 cursor-pointer rounded-full btn_social">
-                  <IoMailSharp size={30} />
-                </div>
-                <p>G-Mail</p>
-              </div>
-              <div className="flex space-x-5 items-center">
-                <div className="p-2 cursor-pointer rounded-full btn_social">
-                  <IoLogoTwitter size={30} />
-                </div>
-                <p>Twitter</p>
-              </div>
+              <ScrollAnimation animateIn="bounceInRight" animateOut="fadeOut">
+                <a
+                  href="http://github.com/sachinshelke7"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="flex space-x-5 items-center cursor-pointer">
+                    <div className="p-2 rounded-full btn_social bg-[#404040] z-10">
+                      <IoLogoGithub size={30} />
+                    </div>
+                    <p className="sachin absolute pl-10 w-[125px]">Github</p>
+                  </div>
+                </a>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="bounceInRight" animateOut="fadeOut">
+                <a
+                  href="https://www.linkedin.com/in/sachin-shelke1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="flex space-x-5 items-center cursor-pointer">
+                    <div className="p-2 rounded-full btn_social bg-[#404040] z-10">
+                      <IoLogoLinkedin size={30} />
+                    </div>
+                    <p className="sachin absolute pl-10 w-[125px]">Linkedin</p>
+                  </div>
+                </a>
+              </ScrollAnimation>
+
+              <ScrollAnimation animateIn="bounceInRight" animateOut="fadeOut">
+                <a href="mailto:shelkesp1@gmail.com">
+                  <div className="flex space-x-5 items-center cursor-pointer">
+                    <div className="p-2 rounded-full btn_social bg-[#404040] z-10">
+                      <IoMailSharp size={30} />
+                    </div>
+                    <p className="sachin absolute pl-10 w-[125px]">Mail</p>
+                  </div>
+                </a>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="bounceInRight" animateOut="fadeOut">
+                <a
+                  href="https://twitter.com/s2editz"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="flex space-x-5 items-center cursor-pointer">
+                    <div className="p-2 rounded-full btn_social bg-[#404040] z-10">
+                      <IoLogoTwitter size={30} />
+                    </div>
+                    <p className="sachin absolute pl-10 w-[125px]">Twitter</p>
+                  </div>
+                </a>
+              </ScrollAnimation>
             </div>
           </div>
         </div>

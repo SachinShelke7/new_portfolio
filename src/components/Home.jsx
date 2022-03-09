@@ -13,35 +13,57 @@ import { bubble } from "react-burger-menu";
 const Section = () => {
   return (
     <Element name="main" className="element h-screen">
-      <div className="relative top-52 left-0 z-10 pl-10">
-        <Dyanamic />
-        <h3 className="md:w-[550px] pt-10 text-gray-300">
-          I'm a <span className="text-white font-medium">React.JS</span>{" "}
-          Front-End Developer from India who is passionate about making sure
-          that performance of the Web App is{" "}
-          <span className="text-white font-medium">Optimized</span>,{" "}
-          <span className="text-white font-medium">Smooth</span> and{" "}
-          <span className="text-white font-medium">Attractive</span>.
-        </h3>
-        <div className="flex space-x-5 py-5">
-          <div className="p-2 cursor-pointer rounded-full btn_social">
-            <IoLogoGithub size={30} />
+      <div className="px-10 w-full h-screen flex justify-between items-center">
+        <div>
+          {" "}
+          <Dyanamic />
+          <div className="md:w-1/2 pr-10 pt-10 text-gray-300">
+            I'm a <span className="text-white font-medium">React.JS</span>{" "}
+            Front-End Developer from India who is passionate about making sure
+            that performance of the Web App is{" "}
+            <span className="text-white font-medium">Optimized</span>,{" "}
+            <span className="text-white font-medium">Smooth</span> and{" "}
+            <span className="text-white font-medium">Attractive</span>.
           </div>
-          <div className="p-2 cursor-pointer rounded-full btn_social">
-            <IoLogoLinkedin size={30} />
+          <div className="flex space-x-5 py-5">
+            <div className="p-2 rounded-full btn_social">
+              <a
+                href="http://github.com/sachinshelke7"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IoLogoGithub size={30} />
+              </a>
+            </div>
+            <div className="p-2 rounded-full btn_social">
+              <a
+                href="https://www.linkedin.com/in/sachin-shelke1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IoLogoLinkedin size={30} />
+              </a>
+            </div>
+            <div className="p-2 rounded-full btn_social">
+              <a href="mailto:shelkesp1@gmail.com">
+                <IoMailSharp size={30} />
+              </a>
+            </div>
+            <div className="p-2 rounded-full btn_social">
+              <a
+                href="https://twitter.com/s2editz"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IoLogoTwitter size={30} />
+              </a>
+            </div>
           </div>
-          <div className="p-2 cursor-pointer rounded-full btn_social">
-            <IoMailSharp size={30} />
-          </div>
-          <div className="p-2 cursor-pointer rounded-full btn_social">
-            <IoLogoTwitter size={30} />
-          </div>
+          <button className="btn_download font-bold px-6 py-3 rounded-full flex space-x-2 items-center">
+            <FaDownload />
+            <p>Download Resume</p>
+          </button>
         </div>
-        {/* <button className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-md flex space-x-2 items-center"> */}
-        {/* <FaDownload /> */}
-        <button className="btn_download font-bold px-6 py-3 rounded-full">
-          Download Resume
-        </button>
       </div>
     </Element>
   );

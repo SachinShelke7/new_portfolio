@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import { Link } from "react-scroll";
 import {
-  FaBookReader,
   FaHome,
   FaLaptopCode,
   FaMailBulk,
@@ -10,9 +8,9 @@ import {
 
 const Header = () => {
   return (
-    <div className="flex justify-between sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] group shadow-white sachin">
-      <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[1]" />
-      <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[1] right-0" />
+    <div className="flex justify-between sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin">
+      <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100]" />
+      <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100] right-0" />
       <h3 className="py-4 pl-5 z-10 font-saira font-medium text-2xl">
         SACHIN SHELKE
       </h3>
@@ -25,7 +23,7 @@ const Header = () => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none"
+          className="cursor-pointer font-medium select-none active:scale-95"
         >
           <div className="w-full flex justify-center items-center">
             <FaHome />
@@ -40,7 +38,7 @@ const Header = () => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none"
+          className="cursor-pointer font-medium select-none active:scale-95"
         >
           <div className="w-full flex justify-center items-center">
             <FaLaptopCode />
@@ -70,7 +68,7 @@ const Header = () => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none"
+          className="cursor-pointer font-medium select-none active:scale-95"
         >
           <div className="w-full flex justify-center items-center">
             <FaProjectDiagram />
@@ -85,7 +83,7 @@ const Header = () => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none"
+          className="cursor-pointer font-medium select-none active:scale-95"
         >
           <div className="w-full flex justify-center items-center">
             <FaMailBulk />
