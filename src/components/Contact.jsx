@@ -17,13 +17,13 @@ const Contact = () => {
   const [error, setError] = useState(false);
   return (
     <Element name="contact" className="element overflow-hidden">
-      <div className="w-full min-h-screen flex justify-center items-center py-20 overflow-hidden">
+      <div className="w-full flex justify-center items-center py-20 overflow-hidden">
         <div className="p-14 max-w-md sachin">
           <form
             className="flex flex-col space-y-10 justify-center items-center"
             onSubmit={handleSubmit}
           >
-            <h4 className="font-medium">CONTACT FORM</h4>
+            <h4 className="font-medium text-2xl">CONTACT FORM</h4>
             <input
               type="text"
               className="input bg-transparent py-2 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"

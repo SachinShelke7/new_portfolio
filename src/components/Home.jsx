@@ -15,16 +15,16 @@ import { bubble } from "react-burger-menu";
 const Section = () => {
   return (
     <Element name="main" className="element">
-      <div className="px-10 w-full py-32 flex justify-between items-center">
+      <div className="px-10 w-full py-40 flex justify-between items-center overflow-hidden">
         <div>
           <Dyanamic />
           <div className="md:w-1/2 pr-10 pt-10 text-gray-300">
             I'm a <span className="text-white font-medium">React.JS</span>
             Front-End Developer from India who is passionate about making sure
             that performance of the Web App is
-            <span className="text-white font-medium">Optimized</span>,
-            <span className="text-white font-medium">Smooth</span> and
-            <span className="text-white font-medium">Attractive</span>.
+            <span className="text-white font-medium"> Optimized</span>,
+            <span className="text-white font-medium"> Smooth</span> and
+            <span className="text-white font-medium"> Attractive</span>.
           </div>
           <ScrollAnimation animateIn="bounceInLeft" animateOut="fadeOut">
             <div className="flex space-x-5 py-5">
