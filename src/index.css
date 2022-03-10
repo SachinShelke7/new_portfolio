@@ -19,6 +19,9 @@
   .main_bg {
     @apply bg-[#404040] text-white;
   }
+  .container_bg {
+    @apply bg-gray-200 font-sachin w-full select-none scroll-smooth;
+  }
   .skill_card {
     @apply p-5 flex justify-center items-center rounded-[10px] cursor-pointer gap-5;
   }
@@ -43,5 +46,22 @@
       2px 2px 5px #353535, -5px -5px 10px #343434;
     width: 100%;
     box-sizing: border-box;
+  }
+  @keyframes arrow {
+    0%,
+    100% {
+      transform: translateY(25%);
+      animation-timing-function: cubic-bezier(0.5, 0, 0.5, 0);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  .animate-arrow {
+    animation: arrow 1s infinite;
+  }
+  .project img {
+    @apply hover:scale-105 rounded-md transform transition-all duration-[700ms] cursor-pointer;
   }
 }

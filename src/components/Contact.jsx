@@ -9,12 +9,20 @@ import {
 import ScrollAnimation from "react-animate-on-scroll";
 
 const Contact = () => {
+  function handleSubmit(event) {
+    event.preventDefault();
+    setError(true);
+  }
+
   const [error, setError] = useState(false);
   return (
-    <Element name="contact" className="element">
+    <Element name="contact" className="element overflow-hidden">
       <div className="w-full min-h-screen flex justify-center items-center py-20 overflow-hidden">
         <div className="p-14 max-w-md sachin">
-          <div className="flex flex-col space-y-10 justify-center items-center">
+          <form
+            className="flex flex-col space-y-10 justify-center items-center"
+            onSubmit={handleSubmit}
+          >
             <h4 className="font-medium">CONTACT FORM</h4>
             <input
               type="text"
@@ -25,7 +33,7 @@ const Contact = () => {
             <input
               type="text"
               className="input bg-transparent py-2 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"
-              placeholder="Enter Your Surname"
+              placeholder="Enter Your Email"
               required
             />
             <textarea
@@ -35,8 +43,8 @@ const Contact = () => {
               required
             />
             <button
+              type="submit"
               className="btn_download px-3 py-2 rounded-full w-[180px]"
-              onClick={() => setError(true)}
             >
               Send Massage
             </button>
@@ -47,7 +55,7 @@ const Contact = () => {
                 </p>
               )}
             </div>
-          </div>
+          </form>
         </div>
 
         <div className="p-14 relative right-[4.8rem]">
