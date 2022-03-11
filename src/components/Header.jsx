@@ -94,20 +94,20 @@ const Header = ({ toggle, setToggle }) => {
           Contact
         </Link>
       </div>
-      <div className="block md:hidden pr-5">
+      <div className="block sm:hidden pr-5">
         {toggle ? (
           <p
             onClick={() => setToggle(!toggle)}
             className="flex text-white items-center cursor-pointer"
           >
-            <img src={close} alt="close" className="w-10 h-10" />
+            <img src={close} alt="close" className="w-5 h-5" />
           </p>
         ) : (
           <p
             onClick={() => setToggle(!toggle)}
             className="flex text-white items-center cursor-pointer"
           >
-            <img src={menu} alt="menu" className="w-10 h-10" />
+            <img src={menu} alt="menu" className="w-6 h-6" />
           </p>
         )}
       </div>

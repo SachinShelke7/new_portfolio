@@ -17,8 +17,8 @@ const Contact = () => {
   const [error, setError] = useState(false);
   return (
     <Element name="contact" className="element overflow-hidden">
-      <div className="w-full flex justify-center items-center py-20 overflow-hidden">
-        <div className="p-14 max-w-md sachin">
+      <div className="w-full flex flex-col sm:flex-row justify-center items-center py-20 overflow-hidden">
+        <div className="p-14 max-w-md sachin mx-5 sm:mx-0">
           <form
             className="flex flex-col space-y-10 justify-center items-center"
             onSubmit={handleSubmit}
@@ -58,8 +58,8 @@ const Contact = () => {
           </form>
         </div>
 
-        <div className="p-14 relative right-[4.8rem]">
-          <div className="flex flex-col space-y-10 justify-center items-center">
+        <div className="pr-0 p-14 relative right-[4.8rem]">
+          <div className="flex flex-col justify-center items-center">
             <div className="flex flex-col space-y-5">
               <ScrollAnimation animateIn="bounceInRight" animateOut="fadeOut">
                 <a

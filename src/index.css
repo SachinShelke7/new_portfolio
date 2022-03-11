@@ -64,4 +64,7 @@
   .project img {
     @apply hover:scale-105 rounded-md transform transition-all duration-[700ms] cursor-pointer;
   }
+  .mobile_menu {
+    @apply text-white relative z-[1] ease-in-out duration-500 p-10 w-full mx-auto bg-[#404040] border-y border-[#505050];
+  }
 }
