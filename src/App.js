@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import Home from "./components/Home";
 import Skills from "./components/Skills";
@@ -8,11 +9,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <div className="container_bg">
       <div className="mx-auto max-w-[1500px] main_bg">
         <Intro />
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <Home />
         <Skills />
         <Projects />

@@ -5,10 +5,13 @@ import {
   FaMailBulk,
   FaProjectDiagram,
 } from "react-icons/fa";
+import menu from "../assets/images/menu.png";
+import close from "../assets/images/close.png";
+import MobileMenu from "./MobileMenu";
 
-const Header = () => {
+const Header = ({ toggle, setToggle }) => {
   return (
-    <div className="flex justify-between sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin">
+    <div className="flex justify-between items-center sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin">
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100]" />
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100] right-0" />
       <h3 className="py-4 pl-5 z-10 font-saira font-medium text-2xl">
@@ -91,6 +94,24 @@ const Header = () => {
           Contact
         </Link>
       </div>
+      <div className="block md:hidden pr-5">
+        {toggle ? (
+          <p
+            onClick={() => setToggle(!toggle)}
+            className="flex text-white items-center cursor-pointer"
+          >
+            <img src={close} alt="close" className="w-10 h-10" />
+          </p>
+        ) : (
+          <p
+            onClick={() => setToggle(!toggle)}
+            className="flex text-white items-center cursor-pointer"
+          >
+            <img src={menu} alt="menu" className="w-10 h-10" />
+          </p>
+        )}
+      </div>
+      <MobileMenu toggle={toggle} setToggle={setToggle} />
     </div>
   );
 };
