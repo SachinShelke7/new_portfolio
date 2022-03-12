@@ -3,6 +3,7 @@ import { FaDownload } from "react-icons/fa";
 import { Element } from "react-scroll";
 import Dyanamic from "../../assets/type_effect/Dyanamic";
 import ScrollAnimation from "react-animate-on-scroll";
+import resume from "../../assets/pdf/Sachin_Shelke_Resume.pdf";
 
 import {
   IoLogoGithub,
@@ -65,7 +66,9 @@ const Section = () => {
           <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
             <button className="btn_download font-bold px-6 py-3 rounded-full flex space-x-2 items-center">
               <FaDownload />
-              <p>Download Resume</p>
+              <a href={resume} target="_blank" rel="noreferrer">
+                Download Resume
+              </a>
             </button>
           </ScrollAnimation>
         </div>
