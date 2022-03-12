@@ -20,7 +20,7 @@
     @apply bg-[#404040] text-white;
   }
   .container_bg {
-    @apply bg-gray-200 font-sachin w-full select-none scroll-smooth;
+    @apply bg-[#404040] font-sachin w-full select-none scroll-smooth;
   }
   .skill_card {
     @apply p-5 flex justify-center items-center rounded-[10px] cursor-pointer gap-5;
