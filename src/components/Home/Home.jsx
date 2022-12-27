@@ -11,7 +11,6 @@ import {
   IoLogoTwitter,
   IoMailSharp,
 } from "react-icons/io5";
-import { bubble } from "react-burger-menu";
 
 const Section = () => {
   return (

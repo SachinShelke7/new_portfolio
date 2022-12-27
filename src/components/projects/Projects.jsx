@@ -20,7 +20,6 @@ import {
   SiCss3,
   SiJavascript,
   SiFirebase,
-  SiVisualstudiocode,
   SiChakraui,
   SiVercel,
   SiGraphql,
