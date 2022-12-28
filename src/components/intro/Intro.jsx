@@ -47,13 +47,6 @@ const Intro = () => {
             </span>
           </Animator>
         </ScrollPage>
-        <ScrollPage page={2}>
-          <Animator animation={FadeUp}>
-            <span className="text-[20px] lg:text-[40px] whitespace-nowrap">
-              Visit Github For More Projects
-            </span>
-          </Animator>
-        </ScrollPage>
       </ScrollContainer>
     </div>
   );

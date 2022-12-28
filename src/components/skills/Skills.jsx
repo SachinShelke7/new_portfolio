@@ -11,6 +11,7 @@ import {
   SiChakraui,
   SiBootstrap,
   SiAntdesign,
+  SiFirebase,
 } from "react-icons/si";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -145,6 +146,14 @@ const Section = () => {
           rating="2"
           icon={<SiBootstrap size={100} color="#e2e2e2" />}
           animateIn="bounceInLeft"
+          animateOut="fadeOut"
+        />
+        <SkillCard
+          title="Firebase"
+          desc={`Provides tools to grow your app and business/Get your app up and running quickly & securely with fully managed backend infrastructure./Boost App Engagement.)`}
+          rating="2"
+          icon={<SiFirebase size={100} color="#e2e2e2" />}
+          animateIn="bounceInRight"
           animateOut="fadeOut"
         />
       </div>

@@ -5,7 +5,7 @@ const Dyanamic = () => {
     <div className="text-2xl lg:text-4xl font-medium flex space-x-2 font-saira">
       <h2>I'M</h2>
       <dynamic-type
-        words="SACHIN SHELKE; REACT FRONTEND DEVELOPER; SEARCHING FOR JOB."
+        words="SACHIN POPAT SHELKE; REACT FRONTEND DEVELOPER; ACTIVELY LOOKING FOR JOB."
         loop="true"
         typeDelay="150"
         deleteStartAfter="750"
