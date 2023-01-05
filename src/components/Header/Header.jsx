@@ -37,7 +37,7 @@ const Header = ({ toggle, setToggle }) => {
   };
 
   return (
-    <div className="flex justify-between items-center sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin overflow-hidden">
+    <div className="flex justify-between items-center sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin">
       {popup ? (
         <>
           <div className="max-w-[200px] bg-white text-black absolute z-10 rounded-md left-60">
