@@ -7,14 +7,39 @@ import {
   IoMailSharp,
 } from "react-icons/io5";
 import ScrollAnimation from "react-animate-on-scroll";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const Contact = () => {
-  function handleSubmit(event) {
-    event.preventDefault();
-    setError(true);
-  }
+  const [success, setSuccess] = useState(false);
+  const [contactData, setContactData] = useState({});
+  const [loading, setLoading] = useState(false);
 
-  const [error, setError] = useState(false);
+  const handleChange = (e) => {
+    setContactData({ ...contactData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await addDoc(collection(db, "messages"), {
+        name: contactData.name,
+        lastName: contactData.email,
+        message: contactData.message,
+        time: new Date(),
+      });
+      setSuccess(true);
+      setLoading(false);
+      setTimeout(() => {
+        setSuccess(false);
+        setContactData({});
+      }, 3000);
+    } catch (e) {
+      console.error("Error: ", e);
+    }
+  };
+
   return (
     <Element name="contact" className="element overflow-hidden">
       <div className="w-full flex flex-col sm:flex-row justify-center items-center py-20 overflow-hidden">
@@ -29,18 +54,27 @@ const Contact = () => {
               className="input bg-transparent py-2 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"
               placeholder="Enter Your Name"
               required
+              value={contactData.name || ""}
+              name="name"
+              onChange={handleChange}
             />
             <input
-              type="text"
+              type="email"
               className="input bg-transparent py-2 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"
               placeholder="Enter Your Email"
               required
+              value={contactData.email || ""}
+              name="email"
+              onChange={handleChange}
             />
             <textarea
               type="text"
               className="input bg-transparent pt-5 max-w-sm mx-20 rounded-sm pl-5 focus:outline-none"
               placeholder="Massage"
               required
+              value={contactData.message || ""}
+              name="message"
+              onChange={handleChange}
             />
             <button
               type="submit"
@@ -49,10 +83,13 @@ const Contact = () => {
               Send Massage
             </button>
             <div>
-              {error && (
-                <p className="text-red-600 font-medium">
-                  Currently Not Working Use Social Media
+              {success && (
+                <p className="text-green-600 font-medium">
+                  Success , Thank You ❤
                 </p>
+              )}
+              {loading && (
+                <p className="text-green-600 font-medium">Sending data ❤</p>
               )}
             </div>
           </form>

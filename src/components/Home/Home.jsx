@@ -1,7 +1,7 @@
 import React from "react";
 import { FaDownload } from "react-icons/fa";
 import { Element } from "react-scroll";
-import Dyanamic from "../../assets/type_effect/Dyanamic";
+import Dynamic from "../../assets/type_effect/Dyanamic";
 import ScrollAnimation from "react-animate-on-scroll";
 import resume from "../../assets/pdf/Sachin_Shelke_Resume.pdf";
 
@@ -17,7 +17,7 @@ const Section = () => {
     <Element name="main" className="element">
       <div className="px-10 w-full py-40 flex justify-between items-center overflow-hidden">
         <div>
-          <Dyanamic />
+          <Dynamic />
           <div className="md:w-1/2 pr-10 pt-10 text-gray-300">
             I'm a <span className="text-white font-medium">React.JS</span>
             Front-End Developer from India who is passionate about making sure

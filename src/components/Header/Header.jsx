@@ -8,13 +8,63 @@ import {
 import menu from "../../assets/images/menu.png";
 import close from "../../assets/images/close.png";
 import MobileMenu from "./MobileMenu";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 const Header = ({ toggle, setToggle }) => {
+  const [active, setActive] = useState("Home");
+  const [popup, setPopup] = useState(false);
+  const [pin, setPin] = useState();
+  const [cookies, setCookie, removeCookie] = useCookies(["pin"]);
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    setPopup(!popup);
+  };
+
+  const handleSubmit = () => {
+    if (pin === "2306") {
+      navigate("/login");
+      setPopup(false);
+      setCookie("pin", "2306");
+    } else {
+      setPopup(false);
+    }
+  };
+
+  const handlePin = (e) => {
+    setPin(e.target.value);
+  };
+
   return (
-    <div className="flex justify-between items-center sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin">
+    <div className="flex justify-between items-center sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin overflow-hidden">
+      {popup ? (
+        <>
+          <div className="max-w-[200px] bg-white text-black absolute z-10 rounded-md left-60">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                value={pin}
+                placeholder="Enter Pin"
+                onChange={handlePin}
+                className="h-10 outline-none"
+              />
+              <button
+                type="submit"
+                className="bg-green-500 text-white w-full rounded-b-md"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </>
+      ) : null}
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100]" />
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100] right-0" />
-      <h3 className="py-4 pl-5 z-10 font-saira font-medium text-2xl">
+      <h3
+        className="py-4 pl-5 z-10 font-saira font-medium text-2xl"
+        onDoubleClick={handleLogin}
+      >
         SACHIN SHELKE
       </h3>
       <div className="hidden sm:flex items-center sm:space-x-5 px-5 z-10">
@@ -26,7 +76,12 @@ const Header = ({ toggle, setToggle }) => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none active:scale-95"
+          className={`cursor-pointer font-medium select-none active:scale-95 ${
+            active === "Home"
+              ? "text-white border-b-2 border-orange-500"
+              : "text-gray-400"
+          }`}
+          onClick={() => setActive("Home")}
         >
           <div className="w-full flex justify-center items-center">
             <FaHome />
@@ -41,28 +96,18 @@ const Header = ({ toggle, setToggle }) => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none active:scale-95"
+          className={`cursor-pointer font-medium select-none active:scale-95 ${
+            active === "Skill"
+              ? "text-white border-b-2 border-orange-500"
+              : "text-gray-400"
+          }`}
+          onClick={() => setActive("Skill")}
         >
           <div className="w-full flex justify-center items-center">
             <FaLaptopCode />
           </div>
           Skill
         </Link>
-        {/* <Link
-          activeClass="active"
-          to="education"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={1500}
-          delay={500}
-          className="cursor-pointer font-medium select-none"
-        >
-          <div className="w-full flex justify-center items-center">
-            <FaBookReader />
-          </div>
-          Education
-        </Link> */}
         <Link
           activeClass="active"
           to="projects"
@@ -71,7 +116,12 @@ const Header = ({ toggle, setToggle }) => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none active:scale-95"
+          className={`cursor-pointer font-medium select-none active:scale-95 ${
+            active === "Projects"
+              ? "text-white border-b-2 border-orange-500"
+              : "text-gray-400"
+          }`}
+          onClick={() => setActive("Projects")}
         >
           <div className="w-full flex justify-center items-center">
             <FaProjectDiagram />
@@ -86,7 +136,12 @@ const Header = ({ toggle, setToggle }) => {
           offset={-50}
           duration={1500}
           delay={500}
-          className="cursor-pointer font-medium select-none active:scale-95"
+          className={`cursor-pointer font-medium select-none active:scale-95 ${
+            active === "Contact"
+              ? "text-white border-b-2 border-orange-500"
+              : "text-gray-400"
+          }`}
+          onClick={() => setActive("Contact")}
         >
           <div className="w-full flex justify-center items-center">
             <FaMailBulk />
