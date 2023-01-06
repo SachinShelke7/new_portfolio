@@ -82,16 +82,10 @@ const Contact = () => {
             >
               Send Massage
             </button>
-            <div>
-              {success && (
-                <p className="text-green-600 font-medium">
-                  Success , Thank You ❤
-                </p>
-              )}
-              {loading && (
-                <p className="text-green-600 font-medium">Sending data ❤</p>
-              )}
-            </div>
+            <p className="text-green-600 font-medium">
+              {success && "Success , Thank You ❤"}
+              {loading && "Sending data ❤"}
+            </p>
           </form>
         </div>
 

@@ -12,14 +12,21 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
-const Header = ({ toggle, setToggle }) => {
+const Header = ({ toggle, setToggle, acceptedCookies }) => {
   const [active, setActive] = useState("Home");
   const [popup, setPopup] = useState(false);
   const [pin, setPin] = useState();
-  const [cookies, setCookie, removeCookie] = useCookies(["pin"]);
+  const [cookies, setCookie, removeCookie] = useCookies([
+    "pin",
+    "access_token",
+  ]);
   const navigate = useNavigate();
   const handleLogin = () => {
-    setPopup(!popup);
+    if (acceptedCookies) {
+      setPopup(!popup);
+    } else {
+      alert("Please accept cookies to Continue...");
+    }
   };
 
   const handleSubmit = () => {
@@ -36,29 +43,38 @@ const Header = ({ toggle, setToggle }) => {
     setPin(e.target.value);
   };
 
+  const handleAdmin = () => {
+    navigate("/admin");
+  };
+
   return (
     <div className="flex justify-between items-center sticky top-0 bg-[#404040] text-[#FFFFFF] bg-blend-darken w-full z-[999] shadow-white sachin">
-      {popup ? (
+      {acceptedCookies ? (
         <>
-          <div className="max-w-[200px] bg-white text-black absolute z-10 rounded-md left-60">
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                value={pin}
-                placeholder="Enter Pin"
-                onChange={handlePin}
-                className="h-10 outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-green-500 text-white w-full rounded-b-md"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+          {popup ? (
+            <>
+              <div className="max-w-[200px] bg-white text-black absolute z-10 rounded-md left-60">
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    value={pin}
+                    placeholder="Enter Pin"
+                    onChange={handlePin}
+                    className="h-10 outline-none"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-green-500 text-white w-full rounded-b-md"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </>
+          ) : null}
         </>
       ) : null}
+
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100]" />
       <div className="w-2 h-full bg-orange-500 absolute flex justify-center items-center z-[100] right-0" />
       <h3
@@ -148,6 +164,14 @@ const Header = ({ toggle, setToggle }) => {
           </div>
           Contact
         </Link>
+        {cookies.access_token ? (
+          <button
+            className="bg-green-500 text-white rounded-md py-1 px-2 text-sm"
+            onClick={handleAdmin}
+          >
+            Admin
+          </button>
+        ) : null}
       </div>
       <div className="block sm:hidden pr-5">
         {toggle ? (

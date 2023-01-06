@@ -5,7 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { db } from "../../firebase";
 
 const Admin = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(["access_token"]);
+  const [cookies, setCookie, removeCookie] = useCookies([
+    "access_token",
+    "pin",
+  ]);
   const [messages, setMessages] = useState([]);
 
   const navigate = useNavigate();
@@ -13,7 +16,6 @@ const Admin = () => {
   if (!cookies.access_token) {
     navigate("/");
   }
-
   const getData = async () => {
     let msgs = [];
     const fetchDD = await getDocs(collection(db, "messages"));
@@ -28,9 +30,17 @@ const Admin = () => {
 
   const signOut = () => {
     removeCookie("access_token");
+    removeCookie("pin");
   };
+
   return (
     <div className="bg-gray-200 min-h-screen font-saira flex flex-col">
+      <button
+        className="bg-green-500 text-white rounded-md absolute top-5 left-5 py-1 px-2"
+        onClick={() => navigate("/")}
+      >
+        Go To Portfolio
+      </button>
       <button
         className="bg-red-500 text-white rounded-md absolute top-5 right-5 py-1 px-2"
         onClick={signOut}

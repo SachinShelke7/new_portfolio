@@ -21,15 +21,13 @@ const Login = () => {
     if (cookies.access_token) {
       navigate("/admin");
     }
-  }, [cookies.pin, navigate]);
+  }, [cookies.access_token, cookies.pin, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, pass)
       .then((userCredential) => {
-        // Signed in
         const user = userCredential.user;
-        // ...
         setCookie("access_token", user.accessToken);
         navigate("/admin");
       })
@@ -40,40 +38,46 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen w-screen flex justify-center items-center bg-gray-300">
-      <div className="bg-white shadow-lg max-w-2xl rounded-md">
-        <form action="" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email" className="text-sm font-medium">
-              Email
-            </label>
-            <input
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="outline-none h-6 w-full bg-gray-300 border-x-2 border-red-500"
-            />
-          </div>
-          <div>
-            <label htmlFor="pass" className="text-sm font-medium">
-              Pass
-            </label>
-            <input
-              type="pass"
-              value={pass}
-              onChange={(e) => setPass(e.target.value)}
-              required
-              className="outline-none h-6 w-full bg-gray-300 border-x-2 border-red-500"
-            />
-          </div>
-          <button
-            className="w-full bg-green-600 text-white rounded-b-md mt-6"
-            type="submit"
-          >
-            Login
-          </button>
-        </form>
+    <div className="min-h-screen w-screen flex justify-center items-center bg-gray-100">
+      <div className="bg-green-400 p-[2px] rounded-md border-2">
+        <div className="bg-white shadow-lg rounded-md z-10">
+          <form onSubmit={handleSubmit} className="p-10 flex flex-col gap-5">
+            <div>
+              <label htmlFor="email" className="text-sm font-medium">
+                Email
+              </label>
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="outline-none w-full bg-gray-100 h-8 border-x-2 border-green-500 px-1"
+                placeholder="example@gmail.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="pass" className="text-sm font-medium">
+                Pass
+              </label>
+              <input
+                type="password"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+                required
+                className="outline-none h-8 w-full bg-gray-100 border-x-2 border-green-500 px-1"
+                placeholder="Password"
+              />
+            </div>
+            <div className="w-full flex justify-center">
+              <button
+                className="px-4 py-2 bg-green-600 text-white mt-6"
+                type="submit"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
